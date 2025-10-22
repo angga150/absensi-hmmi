@@ -17,11 +17,11 @@
         <h3>daftar Mahasiswa</h3>
 
         <ul class="list-group">
-            <?php foreach( $data['mhs'] as $mhs ) :  ?>
+        <?php foreach( $data['mhs'] as $mhs ) :  ?>
                 <li class="list-group-item">
                     <?= $mhs['nama']; ?>
                     <a href="<?= BASEURL; ?>mahasiswa/detail/<?= $mhs['id']; ?> " class="badge bg-primary float-right">detail</a>
-                    <a href="<?= BASEURL; ?>mahasiswa/detail/<?= $mhs['id']; ?> " class="badge bg-success float-right tampilModalUbal" data-bs-toggle="modal" data-bs-target="#formModal">edit</a>
+                    <a href="<?= BASEURL; ?>mahasiswa/detail/<?= $mhs['id']; ?> " class="badge bg-success float-right">edit</a>
                     <a href="<?= BASEURL; ?>mahasiswa/hapus/<?= $mhs['id']; ?> " class="badge bg-danger float-right" onclick="return confirm('yakin?');">hapus</a>
                 </li>
             <?php endforeach; ?>
